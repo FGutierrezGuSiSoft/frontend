@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Nuestro Sitio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+nav {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+nav a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+div {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+aside {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+section {
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  div {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  nav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Nuestro Sitio</h1>
+  <p>Nuestro primer sitio web.</p>
+</header>
+
+<nav>
+  <a href="#" class="active">Inicio</a>
+  <a href="#">W3Schools</a>
+  <a href="#">W3C</a>
+</nav>
+
+<div>
+  <aside>
+    <h2>Acerca de Mí</h2>
+    <h5>Mí foto:</h5>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png" alt="yo">
+    <p>Esta no es mi verdadera imagen.</p>
+    <h3>Otro título</h3>
+    <p>Y un poco más de texto</p>
+  </aside>
+  <section>
+    <h2>Sección principal</h2>
+    <h5>Creado hace poco tiempo</h5>
+    <p>Aquí podemos agregar más texto</p>
+    <br>
+    <p>Y continuar por aquí</p>
+    <h2>Otra sección</h2>
+    <h5>Un poco más antigua</h5>
+  </section>
+</div>
+
+<footer>
+  <h2>Footer</h2>
+</footer>
+
+</body>
+</html>
